@@ -13,73 +13,75 @@
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">Product Catalog</label>
-                    <select class="custom-select mr-sm-2" name="column_select" id="column_select">
-                        <option selected>Choose...</option>
-                        <option value="col1">Điện Thoại - Máy Tính Bảng</option>
-                        <option value="col2">Điện Tử - Điện Lạnh</option>
-                        <option value="col4">Phụ Kiện - Thiết Bị Số</option>
-                        <option value="col5">Laptop - Thiết Bị IT</option>
-                        <option value="col6">Máy Ảnh - Máy Quay Phim</option>
-                        <option value="col7">Điện Gia Dụng</option>
-                        <option value="col8">Nhà Cửa Đời Sống</option>
-                        <option value="col9">Hàng Tiêu Dùng - Thực Phẩm</option>
-                        <option value="col10">Làm Đẹp - Sức Khỏe</option>
-                        <option value="col11">Thể Thao - Dã Ngoại</option>
-                        <option value="col12">Xe Máy - Oto - Xe Đạp</option>
+                    <select name="catagory" id="catagory" title="OPTIONAL - Choose a Catagory to Limit File Types" class="custom-select mr-sm-2">
+                        <option value="">All Product</option>
+                        <option value="Product1">Điện Thoại - Máy Tính Bảng</option>
+                        <option value="Product2">Điện Tử - Điện Lạnh</option>
+                        <option value="Product3">Phụ Kiện - Thiết Bị Số</option>
+                        <option value="Product4">Laptop - Thiết Bị IT</option>
+                        <option value="Product5">Máy Ảnh - Máy Quay Phim</option>
+                        <option value="Product6">Điện Gia Dụng</option>
+                        <option value="Product7">Nhà Cửa Đời Sống</option>
+                        <option value="Product8">Hàng Tiêu Dùng - Thực Phẩm</option>
+                        <option value="Product9">Làm Đẹp - Sức Khỏe</option>
+                        <option value="Product10">Thể Thao - Dã Ngoại</option>
+                        <option value="Product11">Xe Máy - Oto - Xe Đạp</option>
                     </select>
                 </div>
 
                 <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="inlineFormCustomSelect">List of Sub-Products</label>
-                        <select class="custom-select mr-sm-2" name="layout_select" id="layout_select">
-                        <option value="col1_pr1" >Samsung Galaxy A31</option>
-                        <option value="col1_pr2" >Samsung Galaxy M11</option>
-                        <option value="col1_pr3" >Iphone 12</option>
-                        <option value="col1_pr4" >Xiaomi</option>
-                        <option value="col1_pr5" >Vivo</option>
+                    <select name="fileType" id="fileType" class="custom-select mr-sm-2">
+                        <option value="https://tiki.vn/dien-thoai-smartphone/c1795?src=c.1795.hamburger_menu_fly_out_banner" class="sub-Product1">Smartphone Chính Hãng</option>
+                        <option value="https://tiki.vn/may-tinh-bang/c1794?src=c.1794.hamburger_menu_fly_out_banner" class="sub-Product1">Máy tính bảng</option>
+                        <option value="https://tiki.vn/phu-kien-dien-thoai-va-may-tinh-bang/c8214?src=c.8214.hamburger_menu_fly_out_banner" class="sub-Product1">Phụ Kiện Điện Thoại</option>
+                        <option value="https://tiki.vn/search?q=m%C3%A1y+%C4%91%E1%BB%8Dc+s%C3%A1ch&src=mega-menu" class="sub-Product1">Máy đọc sách</option>
                         <!--Below shows when '2 column' is selected is hidden otherwise-->
-                        <option value="col2_pr1">Tivi OLED</option>
-                        <option value="col2_pr2">Loa Karaoke</option>
-                        <option value="col2_pr3">Máy lạnh Inverter</option>
-                        <option value="col2_pr4">Máy giặt Inverter</option>
-                        <option value="col2_pr5">Tủ lạnh Inverter</option>
-
+                        <option value="https://tiki.vn/tivi/c5015?src=c.5015.hamburger_menu_fly_out_banner" class="sub-Product2">Tivi</option>
+                        <option value="https://tiki.vn/may-giat/c3862?src=c.3862.hamburger_menu_fly_out_banner" class="sub-Product2">Máy giặt</option>
+                        <option value="https://tiki.vn/may-lanh-may-dieu-hoa/c3865?src=c.3865.hamburger_menu_fly_out_banner" class="sub-Product2">Máy lạnh - Máy điều hòa</option>
+                        <option value="chttps://tiki.vn/tu-lanh/c2328?src=c.2328.hamburger_menu_fly_out_banner" class="sub-Product2">Tủ lạnh</option>
+                        <option value="https://tiki.vn/may-nuoc-nong/c3866?src=c.3866.hamburger_menu_fly_out_banner" class="sub-Product2">Máy nước nóng</option>
+                        <option value="https://tiki.vn/may-rua-chen/c3864?src=c.3864.hamburger_menu_fly_out_banner" class="sub-Product2">Máy rửa chén</option>
                         <!--Below shows when '3 column' is selected is hidden otherwise-->
-                        <option value="col3_pr1">Tai nghe nhạc Bluetooth</option>
-                        <option value="col3_pr2">Phụ Kiện Âm Thanh</option>
-                        <option value="col3_pr3">Kính Thực Tế Ảo</option>
-                        <option value="col3_pr4">Pin Sạc Dự Phòng</option>
-                        <option value="col3_pr5">Thiết Bị 3G/4G</option>
-                            <!--Below shows when '4 column' is selected is hidden otherwise-->
-                        <option value="col4_pr1">Macbook</option>
-                        <option value="col4_pr2">Intel Core i7</option>
-                        <option value="col4_pr3">Phụ kiện, Linh kiện máy tính</option>
-                        <option value="col4_pr4">Màn hình máy tính</option>
-                        <option value="col4_pr5">Phần mềm máy tính</option>
-                            <!--Below shows when '5 column' is selected is hidden otherwise-->
-                        <option value="col5_pr1">Máy Ảnh Canon M10 KIT 15-45mm</option>
-                        <option value="col5_pr2">Máy Quay Phim Canon</option>
-                        <option value="col5_pr3">Dây Đeo Máy Ảnh, Máy Quay</option>
-                        <option value="col5_pr4">Camera Quan Sát</option>
-                        <option value="col5_pr5">Lens Nikon</option>
+                        <option value="https://tiki.vn/tai-nghe-co-day/c1804?src=c.1804.hamburger_menu_fly_out_banner" class="sub-Product3">Tai nghe</option>
+                        <option value="https://tiki.vn/loa-nghe-nhac/c1805?src=c.1805.hamburger_menu_fly_out_banner" class="sub-Product3">Loa Nghe Nhạc</option>
+                        <option value="https://tiki.vn/phu-kien-dien-thoai-va-may-tinh-bang/c8214?src=c.8214.hamburger_menu_fly_out_banner" class="sub-Product3">Phụ Kiện Điện Thoại</option>
+                        <option value="https://tiki.vn/thiet-bi-choi-game-va-phu-kien/c2667?src=c.2667.hamburger_menu_fly_out_banner" class="sub-Product3">Thiết Bị Chơi Game</option>
+                        <option value="https://tiki.vn/thiet-bi-mang/c2663?src=c.2663.hamburger_menu_fly_out_banner" class="sub-Product3">Thiết Bị Mạng</option>
+                        <!--Below shows when '4 column' is selected is hidden otherwise-->
+                        <option value="https://tiki.vn/laptop/c8095?src=c.8095.hamburger_menu_fly_out_banner" class="sub-Product4">Laptop Chính Hãng</option>
+                        <option value="https://tiki.vn/thiet-bi-van-phong-thiet-bi-ngoai-vi/c12884?src=c.12884.hamburger_menu_fly_out_banner" class="sub-Product4">Thiết Bị Văn Phòng</option>
+                        <option value="https://tiki.vn/linh-kien-may-tinh-phu-kien-may-tinh/c8129?src=c.8129.hamburger_menu_fly_out_banner" class="sub-Product4">Phụ kiện, Linh kiện máy tính</option>
+                        <option value="https://tiki.vn/laptop/c8095?src=c.8095.hamburger_menu_fly_out_banner" class="sub-Product4">Laptop theo giá</option>
+                        <option value="https://tiki.vn/may-chieu-va-phu-kien-may-chieu/c2664?src=c.2664.hamburger_menu_fly_out_banner" class="sub-Product4">Máy Chiếu</option>
+                        <!--Below shows when '5 column' is selected is hidden otherwise-->
+                        <option value="https://tiki.vn/ong-kinh-lens/c2757?src=c.2757.hamburger_menu_fly_out_banner" class="sub-Product5">Ống Kính Lens</option>
+                        <option value="Bread2" class="sub-Product5">Phụ Kiện Máy Ảnh</option>
+                        <option value="Bread1" class="sub-Product5">White Bread</option>
+                        <option value="Bread2" class="sub-Product5">Panini</option>
                         <!--Below shows when '6 column' is selected is hidden otherwise-->
-                        <option value="col6_pr1">Máy xay-máy ép</option>
-                        <option value="col6_pr2">Lò nướng điện</option>
-                        <option value="col6_pr3">Nồi cơm điện</option>
-                        <option value="col6_pr4">Máy lọc nước</option>
-                        <option value="col6_pr5">Máy lọc không khí</option>
-                            <!--Below shows when '7 column' is selected is hidden otherwise-->
-                        <option value="col7_pr1">Dao và phụ kiện</option>
-                        <option value="col7_pr2">Đèn & thiết bị chiếu sáng</option>
-                        <option value="col7_pr3">Thiết bị điều khiển thông minh</option>
-                        <option value="col7_pr4">Đồ dùng phòng ngủ</option>
-                        <option value="col7_pr5">Dao và phụ kiện</option>
-                        </select>
+                        <option value="Bread1" class="sub-Product6">White Bread</option>
+                        <option value="Bread2" class="sub-Product6">Panini</option>
+                        <option value="Bread1" class="sub-Product6">White Bread</option>
+                        <option value="Bread2" class="sub-Product6">Panini</option>
+                        <!--Below shows when '7 column' is selected is hidden otherwise-->
+                        <option value="Bread1" class="sub-Product7">White Bread</option>
+                        <option value="Bread2" class="sub-Product7">Panini</option>
+                        <option value="Bread1" class="sub-Product7">White Bread</option>
+                        <option value="Bread2" class="sub-Product7">Panini</option>
+                        <!--Below shows when '8 column' is selected is hidden otherwise-->
+                        <option value="Bread1" class="sub-Product8">White Bread</option>
+                        <option value="Bread2" class="sub-Product8">Panini</option>
+                        <option value="Bread1" class="sub-Product8">White Bread</option>
+                        <option value="Bread2" class="sub-Product8">Panini</option>
+                    </select>
+                    <span id="optionstore" style="display:none;"></span>
                 </div>
             </div>
             </form>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
 
             </div>
             <table class="table table-borderless">
@@ -116,25 +118,61 @@
 </div>
 
 <script>
-            $(document).ready(function() {
-    var optarray = $("#layout_select").children('option').map(function() {
-        return {
-            "value": this.value,
-            "option": "<option value='" + this.value + "'>" + this.text + "</option>"
-        }
-    })
+    $(document).ready(function() {
 
-    $("#column_select").change(function() {
-        $("#layout_select").children('option').remove();
-        var addoptarr = [];
-        for (i = 0; i < optarray.length; i++) {
-            if (optarray[i].value.indexOf($(this).val()) > -1) {
-                addoptarr.push(optarray[i].option);
-            }
+    $('#catagory').on("change", function() {
+        var cattype = $(this).val();
+        optionswitch(cattype);
+    });
+
+    });
+
+    function optionswitch(myfilter) {
+    //Populate the optionstore if the first time through
+    if ($('#optionstore').text() == "") {
+        $('option[class^="sub-"]').each(function() {
+            var optvalue = $(this).val();
+            var optclass = $(this).prop('class');
+            var opttext = $(this).text();
+            optionlist = $('#optionstore').text() + "@%" + optvalue + "@%" + optclass + "@%" + opttext;
+            $('#optionstore').text(optionlist);
+        });
+    }
+    //delete everything
+    $('option[class^="sub-"]').remove();
+    // put the filtered stuff back
+    populateoption = rewriteoption(myfilter);
+    $('#fileType').html(populateoption);
+    }
+
+    function rewriteoption(myfilter) {
+    //rewrite only the filtered stuff back into the option
+    var options = $('#optionstore').text().split('@%');
+    var resultgood = false;
+    var myfilterclass = "sub-" + myfilter;
+    var optionlisting = "";
+
+    myfilterclass = (myfilter != "")?myfilterclass:"all";
+    //first variable is always the value, second is always the class, third is always the text
+    for (var i = 3; i < options.length; i = i + 3) {
+        if (options[i - 1] == myfilterclass || myfilterclass == "all") {
+            optionlisting = optionlisting + '<option value="' + options[i - 2] + '" class="sub-' + options[i - 1] + '">' + options[i] + '</option>';
+            resultgood = true;
         }
-        $("#layout_select").html(addoptarr.join(''))
-    }).change();
-})
+    }
+    if (resultgood) {
+        return optionlisting;
+    }
+    }
+</script>
+
+<script>
+    $(document).ready(function() {
+    $('#submit').on('click', function() {
+        var text =  $('#fileType').val();
+        alert(text);
+    });
+    });
 </script>
 @endsection
 
