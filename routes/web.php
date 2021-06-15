@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +18,14 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+
 Route::get('/dashboard', function () {
     return view('pages.home');
 })->name('dashboard');
 
-// Route::get('/category', 'Category@index')->name('category');
-Route::get('/category', function () {
-    return view('pages.category');
-})->name('category');
+
+Route::get('/category', 'CategoryController@index')->name('category');
+Route::post('category', 'CategoryController@getinfor');
 
 Route::get('/compare', function () {
     return view('pages.compare_request');
