@@ -9,7 +9,7 @@
         <div class="card">
             <h5 class="card-header">Compare Request Based </h5>
             <div class="card-body">
-            <form action="" name="category" id="category" accept-charset="utf-8" method="post" enctype="multipart/form-data">
+            <!-- <form action="" name="category" id="category" accept-charset="utf-8" method="post" enctype="multipart/form-data"> -->
             {{ csrf_field() }}
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
@@ -27,7 +27,7 @@
                     <label class="mr-sm-2" for="inlineFormCustomSelect">List of Sub-Products</label>
                     <select name="fileType" id="fileType" class="custom-select mr-sm-2">
                     @foreach($query as $opt)
-                        <option value={{ $opt->url_product }}>{{ $opt->name_url_product }}</option>
+                        <option value={{ $opt->url_product  }}><a href="{{ route('product.show', $opt -> id_url_product) }}">{{ $opt->name_url_product }}</a></option>
                     @endforeach
                     </select>
                     <span id="optionstore" style="display:none;"></span>
@@ -35,7 +35,7 @@
             </div>
 
             <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <!-- </form> -->
             </div>
             <table class="table table-borderless">
                 <thead>
@@ -47,17 +47,20 @@
                     </tr>
                 </thead>
         <tbody>
-        @foreach($infor as $opt)
+        @if(isset ($ranking))
+        @foreach($ranking as $rank)
             <tr>
-                <th scope="row">{{ $opt->id_supplier }}</th>
-                <td>{{ $opt->name_supplier }}</td>
-                <td>{{ $opt->rank }}</td>
-                <td>{{ $opt->quality }}</td>
+                <th scope="row">{{ $rank->id_supplier }}</th>
+                <td>{{ $rank->name_supplier }}</td>
+                <td>{{ $rank->rank }}</td>
+                <td>{{ $rank->quality }}</td>
             </tr>
         @endforeach
+        @endif
         <!-- {{ $infor ->links() }} -->
         </tbody>
         </table>
+       
         </div>
     </div>
 </div>

@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Illuminate\Support\Facades\DB;
+use App\Models\Rank;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Collection;
 class CategoryController extends Controller
 {
@@ -25,9 +27,15 @@ class CategoryController extends Controller
         return view('pages.category',$viewdata);
     }
 
-    public function getinfor(){
 
-    }
-
-
+    public function show($id)
+        {
+            $category = Category::find($id);
+            dd($category);
+            $ranking = Rank::where('id_url_product', $id)->paginate(3);
+           
+            return view('pages.category')->with([
+                'ranking' => $ranking
+            ]);
+        }
 }

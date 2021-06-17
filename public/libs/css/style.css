@@ -154,7 +154,9 @@
 
 /* 0.1. Body / Typography
    ========================================================================== */
-
+button#submit {
+    margin: 15px 13px -10px;
+}
 body {
     font-family: 'Circular Std Book';
     font-style: normal;
@@ -2726,6 +2728,7 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
     color: #fff;
     background-color: #2ec551;
     border-color: #2ec551;
+    margin-top: 28px;
 }
 
 .btn-success:hover {
@@ -6552,6 +6555,7 @@ Vertical Timeline - by CodyHouse.co
 
 .align-items-center {
     align-items: center !important;
+    padding: 10px;
 }
 
 .chat-team-sidebar .nav {
