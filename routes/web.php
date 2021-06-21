@@ -30,6 +30,8 @@ Route::get('/category', 'FilterController@index')->name('category');
 Route::get('/category/{id_url_product}','CategoryController@show')->name('product.show');
 
 
-Route::get('/compare', function () {
-    return view('pages.compare_request');
-})->name('compare');
+Route::get('/compare', 'FilterController@compare')->name('compare');
+//Route::get('/compare/{id_url_product}','CategoryController@show')->name('product.show');
+
+
+
