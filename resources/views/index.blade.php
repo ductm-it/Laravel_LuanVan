@@ -66,15 +66,22 @@
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
     <script src="{{ URL::asset('/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
- 
-  
 
+
+    <script src="{{URL:: asset('/vendor/charts/chartist-bundle/chartist.min.js') }}"></script>
+    <!-- morris js -->
+    <script src="{{ asset('/vendor/charts/morris-bundle/raphael.min.js') }}"></script>
+    <script src="{{ asset('/vendor/charts/morris-bundle/morris.js') }}"></script>
+    <!-- chart c3 js -->
+    <script src="{{ URL::asset('/vendor/charts/c3charts/c3.min.js') }}"></script>
+    <script src="{{ URL::asset('/vendor/charts/c3charts/d3-5.4.0.min.js') }}"></script>
+    <script src="{{ URL::asset('/vendor/charts/c3charts/C3chartjs.js') }}"></script>
     <script src="{{ asset('/vendor/jquery/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('/vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('/vendor/multi-select/js/jquery.multi-select.js') }}"></script>
-    <script src="{{ asset('/libs/js/main-js.js') }}"></script>    
-    <script src="{{ URL::asset('/vendor/datatables/js/dataTables.bootstrap4.min.js') }}"></script>  
- 
+    <script src="{{ asset('/libs/js/main-js.js') }}"></script>
+    <script src="{{ URL::asset('/vendor/datatables/js/dataTables.bootstrap4.min.js') }}"></script>
+
 </body>
 
 </html>

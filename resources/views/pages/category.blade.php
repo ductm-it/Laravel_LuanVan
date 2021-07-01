@@ -43,7 +43,7 @@
                         <th scope="col">STT</th>
                         <th scope="col">Name Of Supplier</th>
                         <th scope="col">Classification</th>
-                        <th scope="col">Link Of Product</th>
+                        <th scope="col">Total Point</th>
                     </tr>
                 </thead>
         <tbody>
@@ -53,14 +53,14 @@
                 <th scope="row">{{ $rank->id_supplier }}</th>
                 <td>{{ $rank->name_supplier }}</td>
                 <td>{{ $rank->rank }}</td>
-                <td>{{ $rank->quality }}</td>
+                <td>{{ $rank->total_point }}</td>
             </tr>
         @endforeach
         @endif
         <!-- {{ $infor ->links() }} -->
         </tbody>
         </table>
-       
+
         </div>
     </div>
 </div>

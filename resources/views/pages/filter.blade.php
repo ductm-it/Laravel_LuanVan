@@ -32,20 +32,22 @@
 							<span id="optionstore" style="display:none;"></span>
 						</div>
 				</div>
-    			
-				
-    			
+
+
+
 	    		<input type="submit" class="btn btn-success btn-sm" value="Filter">
 	    		</form>
-	    	
-	    	
+
+
 	    		<table class="table table-stripped">
 	    			<thead>
 	    				<tr>
 	    					<th>STT</th>
 	    					<th>Name Of Supplier</th>
+                            <th>Quality</th>
+                            <th>Price</th>
 	    					<th>Classification</th>
-	    					<th>Link Of Product</th>
+	    					<th>Total Point</th>
 	    				</tr>
 	    			</thead>
 	    			<tbody>
@@ -53,8 +55,10 @@
 	    				<tr>
 	    					<td>{{ $loop->index+1 }}</td>
 							<td>{{ $rank->name_supplier }}</td>
+                            <td>{{ $rank->quality }}</td>
+                            <td>{{ $rank->price }}</td>
                				<td>{{ $rank->rank }}</td>
-                			<td>{{ $rank->quality }}</td>
+                			<td>{{ $rank->total_point }}</td>
 	    				</tr>
 	    				@empty
 						<br>
@@ -62,7 +66,9 @@
 	    				@endforelse
 	    			</tbody>
 	    		</table>
-	    
+                <div class="d-flex justify-content-center">
+                {{ $ranking->links() }}
+				</div>
                 </div>
             </div>
         </div>

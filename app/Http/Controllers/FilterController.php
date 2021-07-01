@@ -22,12 +22,12 @@ class FilterController extends Controller
                    $query->from('url_product_information')->where('id_url_product',$request->product_id) : '';
        })
        ->with('product')
-       ->get();
+       ->paginate(10);
        //dd($ranking);
-       
+
        $selected_id = [];
        $selected_id['product_id'] = $request->product_id;
-       
+
         $viewdata = [
             'categories' => $categories,
             'product' =>$product,
@@ -46,7 +46,7 @@ class FilterController extends Controller
             return $request->product_id ?
                    $query->from('url_product_information')->where('id_url_product',$request->product_id) : '';
        })
-       //->with('product')
+
        ->select('*');
 
        if($request->orderby)
@@ -57,21 +57,21 @@ class FilterController extends Controller
                 case 'asc':
                     $ranking->orderBy('price','ASC');
                     break;
-                
+
                 case 'desc':
                     $ranking->orderBy('price','DESC');
                     break;
                     case 'asc1':
                         $ranking->orderBy('quality','ASC');
                         break;
-                    
+
                     case 'desc1':
                         $ranking->orderBy('quality','DESC');
                         break;
             }
         }
 
-       
+
        $selected_id = [];
        $selected_id['product_id'] = $request->product_id;
        $ranking = $ranking->get();

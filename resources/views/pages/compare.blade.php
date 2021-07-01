@@ -31,27 +31,27 @@
 							</select>
 							<span id="optionstore" style="display:none;"></span>
 						</div>
-                    
+
                     <div class="col-auto my-1">
 						<label class="mr-sm-2" for="inlineFormCustomSelect">Filter</label>
 						<select name ="orderby" id="input" class="custom-select mr-sm-2">
-                            <option {{ Request::get('orderby') == "asc" ? "selected ='selected'" : ""}} value="asc">Giá tăng dần</option>
-                            <option {{ Request::get('orderby') == "desc" ? "selected ='selected'" : ""}} value="desc">Giá giảm dần</option>
-                            <option {{ Request::get('orderby') == "asc1" ? "selected ='selected'" : ""}} value="asc1">SL tăng dần</option>
-                            <option {{ Request::get('orderby') == "desc1" ? "selected ='selected'" : ""}} value="desc1">SL giảm dần</option>
-   
+                            <option {{ Request::get('orderby') == "asc" ? "selected ='selected'" : ""}} value="asc">Price Bad</option>
+                            <option {{ Request::get('orderby') == "desc" ? "selected ='selected'" : ""}} value="desc">Price Good</option>
+                            <option {{ Request::get('orderby') == "asc1" ? "selected ='selected'" : ""}} value="asc1">Quality Bad</option>
+                            <option {{ Request::get('orderby') == "desc1" ? "selected ='selected'" : ""}} value="desc1">Quality Good</option>
+
                      </select>
 					</div>
 
-                    
+
 				</div>
-    			
-				
-    			
+
+
+
 	    		<input type="submit" class="btn btn-success btn-sm" value="Filter">
 	    		</form>
-	    	
-	    	
+
+
 	    		<table class="table table-stripped">
 	    			<thead>
 	    				<tr>
@@ -60,6 +60,7 @@
                             <th>Price</th>
                             <th>Quality</th>
                             <th>Classification</th>
+                            <th>Total Point</th>
 	    				</tr>
 	    			</thead>
 	    			<tbody>
@@ -70,14 +71,17 @@
                             <td>{{ $rank->price }}</td>
                             <td>{{ $rank->quality }}</td>
                             <td>{{ $rank->rank }}</td>
+                            <td>{{ $rank->total_point }}</td>
 	    				</tr>
 	    				@empty
 						<br>
-	    				<p> No data Found </p>
+                        <tr>
+                        <p> No data Found </p>
+                        </tr>
 	    				@endforelse
 	    			</tbody>
 	    		</table>
-	    
+
                 </div>
             </div>
         </div>
