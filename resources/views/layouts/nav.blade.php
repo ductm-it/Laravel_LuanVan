@@ -11,12 +11,17 @@
                                 Features
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href=" {{ route('dashboard') }}" aria-controls="submenu-7"><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href=" {{ route('category') }}" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Category</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href=" {{ route('compare') }}" aria-controls="submenu-7"><i class="fas fa-balance-scale"></i>Compare</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link" href=" {{ route('recommend') }}" aria-controls="submenu-7"><i class="fas fa-star"></i>Recommend</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

@@ -17,6 +17,7 @@ class FilterController extends Controller
         $categories = $this->getCategories();
         $product = $this->getProduct();
 
+
         $ranking = Rank::where( function($query) use($request){
             return $request->product_id ?
                    $query->from('url_product_information')->where('id_url_product',$request->product_id) : '';
@@ -33,6 +34,7 @@ class FilterController extends Controller
             'product' =>$product,
             'ranking' => $ranking,
             'selected_id' => $selected_id,
+            'query' => $request->query(),
         ];
         //dd($viewdata);
         return view('pages.filter',$viewdata);
@@ -46,7 +48,6 @@ class FilterController extends Controller
             return $request->product_id ?
                    $query->from('url_product_information')->where('id_url_product',$request->product_id) : '';
        })
-
        ->select('*');
 
        if($request->orderby)
@@ -61,32 +62,58 @@ class FilterController extends Controller
                 case 'desc':
                     $ranking->orderBy('price','DESC');
                     break;
-                    case 'asc1':
-                        $ranking->orderBy('quality','ASC');
-                        break;
+                case 'asc1':
+                    $ranking->orderBy('quality','ASC');
+                    break;
 
-                    case 'desc1':
-                        $ranking->orderBy('quality','DESC');
-                        break;
+                case 'desc1':
+                    $ranking->orderBy('quality','DESC');
+                    break;
+
+                case 'asc2':
+                    $ranking->orderBy('logistic','ASC');
+                    break;
+
+                case 'desc2':
+                    $ranking->orderBy('logistic','DESC');
+                    break;
+                case 'asc3':
+                    $ranking->orderBy('technology','ASC');
+                    break;
+
+                case 'desc3':
+                    $ranking->orderBy('technology','DESC');
+                    break;
             }
         }
 
 
        $selected_id = [];
        $selected_id['product_id'] = $request->product_id;
-       $ranking = $ranking->get();
+       $ranking = $ranking->paginate(10);
 
         $viewdata = [
             'categories' => $categories,
             'product' =>$product,
             'ranking' => $ranking,
             'selected_id' => $selected_id,
+            'query' => $request->query(),
         ];
         //dd($viewdata);
         return view('pages.compare',$viewdata);
     }
 
-
+    public function products( Request $request )
+    {
+          $products = Product::where('id_url_category_detail', $request->get('id') )->get();
+          //you can handle output in different ways, I just use a custom filled array. you may pluck data and directly output your data.
+          $output = [];
+          foreach( $products as $product )
+          {
+             $output[$product->id_url_product] = $product->name_url_product;
+          }
+          return $output;
+    }
 
     public function getCategories()
     {

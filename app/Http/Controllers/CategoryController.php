@@ -22,7 +22,8 @@ class CategoryController extends Controller
         $viewdata = [
             'data' => $data,
             'query' =>$query,
-            'infor' => $infor
+            'infor' => $infor,
+            'has_selected' => 0
         ];
         return view('pages.category',$viewdata);
     }
@@ -33,7 +34,7 @@ class CategoryController extends Controller
             $category = Category::find($id);
             dd($category);
             $ranking = Rank::where('id_url_product', $id)->paginate(3);
-           
+
             return view('pages.category')->with([
                 'ranking' => $ranking
             ]);
