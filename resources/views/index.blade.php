@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{{ URL::asset('backend/vendor/bootstrap-select/css/bootstrap-select.css') }}">
 
 
-        <title>Supplier Evaluation</title>
+        <title>vendor Evaluation</title>
     </head>
 
 <body>
@@ -90,7 +90,7 @@
         <script src="{{ URL::asset('backend/vendor/charts/c3charts/C3chartjs.js') }}"></script>
         <script src="{{ URL::asset('backend/libs/js/dashboard-ecommerce.js') }}"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
         <script src="{{ URL::asset('backend/vendor/bootstrap-select/js/bootstrap-select.js') }}"></script>
 </body>
 

@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $ranking = Rank::select('name_supplier')
-        ->groupBy('name_supplier')
+        $ranking = Rank::select('name_vendor')
+        ->groupBy('name_vendor')
         ->havingRaw('count(*) > 1')
         ->orderBy('total_point', 'DESC')
         ->take(10)

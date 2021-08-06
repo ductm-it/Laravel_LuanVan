@@ -42,7 +42,7 @@
 	    			<thead>
 	    				<tr>
 	    					<th>STT</th>
-	    					<th>Name Of Supplier</th>
+	    					<th>Name Of Vendor</th>
                             <th>Quality</th>
                             <th>Price</th>
                             <th>Logistic</th>
@@ -55,7 +55,7 @@
 					@forelse($ranking as $rank )
 	    				<tr>
 	    					<td>{{ $loop->index+1 }}</td>
-                            <td>{{ $rank->name_supplier }}</td>
+                            <td>{{ $rank->name_vendor }}</td>
                             <td>{{ $rank->quality }}</td>
                             <td>{{ $rank->price }}</td>
                             <td>{{ $rank->logistic }}</td>

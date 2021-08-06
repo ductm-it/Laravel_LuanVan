@@ -100,7 +100,7 @@
         <thead>
             <tr>
                 <th scope="col">STT</th>
-                <th scope="col">Name Of Supplier</th>
+                <th scope="col">Name Of Vendor</th>
                 <th scope="col">Rank</th>
                 <th scope="col">Link Of Product</th>
             </tr>

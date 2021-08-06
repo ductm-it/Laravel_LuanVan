@@ -41,7 +41,7 @@
                 <thead>
                     <tr>
                         <th scope="col">STT</th>
-                        <th scope="col">Name Of Supplier</th>
+                        <th scope="col">Name Of Vendor</th>
                         <th scope="col">Classification</th>
                         <th scope="col">Total Point</th>
                     </tr>
@@ -50,8 +50,8 @@
         @if(isset ($ranking))
         @foreach($ranking as $rank)
             <tr>
-                <th scope="row">{{ $rank->id_supplier }}</th>
-                <td>{{ $rank->name_supplier }}</td>
+                <th scope="row">{{ $rank->id_vendor }}</th>
+                <td>{{ $rank->name_vendor }}</td>
                 <td>{{ $rank->rank }}</td>
                 <td>{{ $rank->total_point }}</td>
             </tr>

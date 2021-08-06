@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Rank extends Model
 {
     use HasFactory;
-    protected $table = 'information_ranking_supplier';
-    
+    protected $table = 'information_ranking_vendor';
+
     public function product()
     {
     	return $this->belongsTo(Product::class);
     }
-    
-    
+
+
 }

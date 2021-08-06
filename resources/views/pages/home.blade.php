@@ -6,7 +6,7 @@
         <!-- ============================================================== -->
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="card">
-                <h5 class="card-header"> Supplier Category</h5>
+                <h5 class="card-header"> Vendor Category</h5>
                 <div class="card-body">
                     <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                     <div class="text-center m-t-40">
@@ -43,7 +43,7 @@
                                 <option value="3">Yearly</option>
                             </select>
                         </div> -->
-                    <h5 class="mb-0"> Supplier Chart</h5>
+                    <h5 class="mb-0"> Vendor Chart</h5>
                 </div>
                 <div class="card-body">
                     <div class="ct-chart-product ct-golden-section"></div>
@@ -58,13 +58,13 @@
             <!-- top perfomimg  -->
             <!-- ============================================================== -->
             <div class="card">
-                <center><h5 class="card-header">Top List Supplier</h5></center>
+                <center><h5 class="card-header">Top List Vendor</h5></center>
                 <div class="card-body p-0">
                     <div class="table-responsive">
                         <table class="table no-wrap p-table">
                             {{-- <thead class="bg-light"> --}}
                                 {{-- <tr class="border-0"> --}}
-                                    {{-- <th class="border-0">Name Supplier</th> --}}
+                                    {{-- <th class="border-0">Name vendor</th> --}}
                                     {{-- <th class="border-0">Point</th>
                                     <th class="border-0">Rank</th> --}}
                                 {{-- </tr> --}}
@@ -73,7 +73,7 @@
                             @if (isset($ranking))
                             @foreach ($ranking as $rank)
                                 <tr>
-                                    <td>{{ $rank->name_supplier}}</td>
+                                    <td>{{ $rank->name_vendor}}</td>
                                     {{-- <td>{{$rank->total_point}}</td>
                                     <td>{{ $rank->rank  }}</td> --}}
 

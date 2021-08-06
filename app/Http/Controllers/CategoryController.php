@@ -17,7 +17,7 @@ class CategoryController extends Controller
                 ->get();
         $query = DB::table('url_product_information')
                 ->get();
-        $infor = DB::table('information_ranking_supplier')
+        $infor = DB::table('information_ranking_vendor')
                 ->paginate(3);
         $viewdata = [
             'data' => $data,
